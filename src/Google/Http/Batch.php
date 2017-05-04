@@ -104,7 +104,7 @@ EOF;
 
     $body .= "--{$this->boundary}--";
     $body = trim($body);
-    $url = Google_Client::API_BASE_PATH . '/' . self::BATCH_PATH;
+    $url = 'https://translation.googleapis.com/batch/translate'; //Google_Client::API_BASE_PATH . '/' . self::BATCH_PATH;
     $headers = array(
       'Content-Type' => sprintf('multipart/mixed; boundary=%s', $this->boundary),
       'Content-Length' => strlen($body),
